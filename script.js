@@ -42,18 +42,12 @@ function addCurrent(dice) {
   } else {
     if (!playerNumber) {
       current0 = 0;
-      total0 = 0;
-      localStorage.setItem('total0', total0);
       currentElement0.textContent = '0';
-      totalElement0.textContent = '0';
       changePlayerActive();
       playerNumber = !playerNumber;
     } else {
       current1 = 0;
-      total1 = 0;
-      localStorage.setItem('total1', total1);
       currentElement1.textContent = '0';
-      totalElement1.textContent = '0';
       changePlayerActive();
       playerNumber = !playerNumber;
     }
