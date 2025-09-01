@@ -9,6 +9,8 @@ const currentElement0 = document.querySelector('#current--0');
 const currentElement1 = document.querySelector('#current--1');
 const totalElement0 = document.querySelector('#score--0');
 const totalElement1 = document.querySelector('#score--1');
+const sectionElement0 = document.querySelector('.player--0');
+const sectionElement1 = document.querySelector('.player--1');
 
 let current0 = 0;
 let current1 = 0;
@@ -66,6 +68,7 @@ function setHoldValue() {
     currentElement0.textContent = '0';
     current0 = 0;
     changePlayerActive();
+    setWinner();
 
     playerNumber = !playerNumber;
   } else {
@@ -75,6 +78,7 @@ function setHoldValue() {
     currentElement1.textContent = '0';
     current1 = 0;
     changePlayerActive();
+    setWinner();
 
     playerNumber = !playerNumber;
   }
@@ -82,11 +86,11 @@ function setHoldValue() {
 
 function changePlayerActive() {
   if (!playerNumber) {
-    document.querySelector('.player--0').classList.remove('player--active');
-    document.querySelector('.player--1').classList.add('player--active');
+    sectionElement0.classList.remove('player--active');
+    sectionElement1.classList.add('player--active');
   } else {
-    document.querySelector('.player--1').classList.remove('player--active');
-    document.querySelector('.player--0').classList.add('player--active');
+    sectionElement1.classList.remove('player--active');
+    sectionElement0.classList.add('player--active');
   }
 }
 
@@ -104,6 +108,32 @@ function resetNewGame() {
 
   current1 = 0;
   currentElement1.textContent = '0';
+
+  sectionElement0.classList.remove('player--winner');
+  sectionElement0.classList.add('player--active');
+  sectionElement1.classList.remove('player--winner');
+  sectionElement1.classList.remove('player--active');
+
+  btnRoll.disabled = false;
+  btnHold.disabled = false;
+  btnRoll.style.backgroundColor = 'white';
+  btnHold.style.backgroundColor = 'white';
+}
+
+function setWinner() {
+  if (total0 >= 20) {
+    sectionElement0.classList.add('player--winner');
+    btnRoll.disabled = true;
+    btnHold.disabled = true;
+    btnRoll.style.backgroundColor = 'gray';
+    btnHold.style.backgroundColor = 'gray';
+  } else if (total1 >= 20) {
+    sectionElement1.classList.add('player--winner');
+    btnRoll.disabled = true;
+    btnHold.disabled = true;
+    btnRoll.style.backgroundColor = 'gray';
+    btnHold.style.backgroundColor = 'gray';
+  }
 }
 
 btnRoll.addEventListener('click', setDice);
