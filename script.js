@@ -25,7 +25,7 @@ totalElement1.textContent = total1;
 function setDice() {
   const DICE_NUMBER = Math.floor(Math.random() * 6) + 1;
 
-  dice.src = `./dice-${DICE_NUMBER}.png`;
+  dice.src = `./img/dice-${DICE_NUMBER}.png`;
 
   addCurrent(DICE_NUMBER);
 }
