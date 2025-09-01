@@ -1,53 +1,48 @@
 # 🎲 Pig Game
 
-یک پروژه سرگرم‌کننده برای تمرین JavaScript:  
-بازی کلاسیک دو نفره با تاس.
+A fun project to practice JavaScript:  
+The classic two-player dice game.
 
 ---
 
-## 🚀 درباره پروژه
-
-این پروژه با استفاده از HTML، CSS و JavaScript ساده پیاده‌سازی شده است.  
-ایده و الهام آن از کورس JavaScript اثر [Jonas Schmedtmann](https://www.udemy.com/course/the-complete-javascript-course/) گرفته شده، اما کدنویسی پروژه به صورت مستقل انجام شده است.
-
----
-
-## ✨ قوانین و ویژگی‌ها
-
-- بازی شامل دو بازیکن است.
-- در هر نوبت، بازیکن می‌تواند با کلیک روی Roll Dice تاس بیندازد:
-  - مقادیر تاس در بخش Current Score بازیکن جمع می‌شود.
-  - اگر عدد ۱ بیاید، امتیاز Current صفر می‌شود و نوبت به بازیکن بعدی می‌رسد.
-- با کلیک روی Hold:
-  - امتیاز Current به Total Score اضافه می‌شود.
-  - نوبت به بازیکن بعدی منتقل می‌شود.
-- اولین بازیکنی که به امتیاز ۳۰ برسد، برنده بازی خواهد بود 🎉
-- دکمه New Game برای شروع مجدد بازی در هر زمان وجود دارد.
+## 🚀 About the Project
+This game is built with HTML, CSS, and vanilla JavaScript.  
+The idea is inspired by the JavaScript course by [Jonas Schmedtmann](https://www.udemy.com/course/the-complete-javascript-course/), but the coding and implementation have been done independently.  
 
 ---
 
-## 📂 ساختار پروژه
-
-- index.html – ساختار اصلی بازی
-- style.css – استایل‌دهی رابط کاربری
-- script.js – منطق بازی و مدیریت قوانین
-
----
-
-## ⚡️ نحوه اجرا
-
-۱. ریپازیتوری را کلون کنید یا فایل‌ها را دانلود کنید  
-۲. فایل index.html را در مرورگر خود باز کنید  
-۳. بازی شروع می‌شود 🎲
+## ✨ Rules & Features
+- The game is played between two players.  
+- On each turn, a player can roll the dice using the Roll Dice button:  
+  - The rolled values are added to the player’s Current Score.  
+  - If a 1 is rolled, the Current Score is reset to 0, and the turn passes to the next player.  
+- By clicking Hold:  
+  - The Current Score is added to the player’s Total Score.  
+  - The turn then passes to the next player.  
+- The first player to reach 30 points wins the game 🎉  
+- A New Game button is available to reset and start again at any time.  
 
 ---
 
-## 📖 منبع
+## 📂 Project Structure
+- index.html – Main HTML structure  
+- style.css – Styling and layout  
+- script.js – Game logic and rules  
 
+---
+
+## ⚡️ How to Run
+1. Clone the repository or download the files  
+2. Open index.html in your browser  
+3. Enjoy the game 🎲  
+
+---
+
+## 📖 Reference
 - [The Complete JavaScript Course - Jonas Schmedtmann](https://www.udemy.com/course/the-complete-javascript-course/)
 
 ---
 
-## 📝 مجوز
+## 📝 License
+This project is free to use for personal learning and practice.
 
-این پروژه آزاد است و می‌توانید از آن برای یادگیری و تمرین شخصی استفاده کنید.

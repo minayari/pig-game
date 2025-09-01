@@ -115,13 +115,13 @@ function resetNewGame() {
 }
 
 function setWinner() {
-  if (total0 >= 20) {
+  if (total0 >= 30) {
     sectionElement0.classList.add('player--winner');
     btnRoll.disabled = true;
     btnHold.disabled = true;
     btnRoll.style.backgroundColor = 'gray';
     btnHold.style.backgroundColor = 'gray';
-  } else if (total1 >= 20) {
+  } else if (total1 >= 30) {
     sectionElement1.classList.add('player--winner');
     btnRoll.disabled = true;
     btnHold.disabled = true;
