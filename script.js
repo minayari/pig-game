@@ -2,6 +2,7 @@
 
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const btnNewGame = document.querySelector('.btn--new');
 const dice = document.querySelector('.dice');
 
 const currentElement0 = document.querySelector('#current--0');
@@ -15,6 +16,9 @@ let total0 = JSON.parse(localStorage.getItem('total0')) || 0;
 let total1 = JSON.parse(localStorage.getItem('total1')) || 0;
 
 let playerNumber = 0;
+
+totalElement0.textContent = total0;
+totalElement1.textContent = total1;
 
 function setDice() {
   const DICE_NUMBER = Math.floor(Math.random() * 6) + 1;
@@ -86,5 +90,22 @@ function changePlayerActive() {
   }
 }
 
+function resetNewGame() {
+  total0 = 0;
+  localStorage.setItem('total0', total0);
+  totalElement0.textContent = '0';
+
+  total1 = 0;
+  localStorage.setItem('total1', total1);
+  totalElement1.textContent = '0';
+
+  current0 = 0;
+  currentElement0.textContent = '0';
+
+  current1 = 0;
+  currentElement1.textContent = '0';
+}
+
 btnRoll.addEventListener('click', setDice);
 btnHold.addEventListener('click', setHoldValue);
+btnNewGame.addEventListener('click', resetNewGame);
